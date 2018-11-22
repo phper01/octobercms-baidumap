@@ -26,7 +26,7 @@ To use this plugin, first you must fill all the required settings. You can put t
 
 The simplest way to add the map is to use the component's default partial and the `{% component %}` tag. Add it to a page or layout where you want to display the map:
 
-    {% component 'googleMap' %}
+    {% component 'baiduMap' %}
 
 If you want to add `Get Directions` button, you can include a component's partial located in the `plugins/grofgraf/googlemaps/components/googlemap/directions-button.htm` by adding
 

@@ -1,0 +1,29 @@
+
+<div id="allmap" style="width:{{__SELF__.getWidth}};height:{{__SELF__.getHeight}};"></div>
+<!--<script>-->
+  <!--var height = "{{map.height}}";-->
+  <!--var width = "{{map.width}}";-->
+  <!--var latitude = {{map.latitude}};-->
+  <!--var longtitude = {{map.longtitude}};-->
+  <!--var zoom = {{map.zoom}};-->
+  <!--var mapType = "{{map.type}}";-->
+  <!--var showMarker = {{map.show_marker}};-->
+  <!--var markerImage = "{{map.marker_image}}";-->
+<!--</script>-->
+
+<script type="text/javascript">
+    //百度地图API功能
+    function loadJScript() {
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src = "http://api.map.baidu.com/api?v=2.0&ak={{map.key}}&callback=init";
+        document.body.appendChild(script);
+    }
+    function init() {
+        var map = new BMap.Map("allmap");  // 创建Map实例
+        var point = new BMap.Point({{map.latitude}}, {{map.longtitude}},{{map.zoom}}); // 创建点坐标
+        map.centerAndZoom(point,15);
+        map.enableScrollWheelZoom();                 //启用滚轮放大缩小
+    }
+    window.onload = loadJScript;  //异步加载地图
+</script>

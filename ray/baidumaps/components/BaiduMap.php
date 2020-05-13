@@ -9,7 +9,7 @@ class BaiduMap extends ComponentBase
     {
         return [
             'name'        => 'baiduMap Component',
-            'description' => 'Component for google map'
+            'description' => 'Component for baidu map'
         ];
     }
 
